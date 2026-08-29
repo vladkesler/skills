@@ -1,0 +1,23 @@
+{
+  "skill_name": "acs-sce-manuscript-editor",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I want to submit this to ACS Sustainable Chemistry & Engineering as a research article. It was drafted quickly with a lot of help from ChatGPT and my PI says it reads like AI and won't survive the editor. Please edit it so it's publishable there: fix the language, follow the journal's style, and tell me what I still need to add. The draft is in draft-des-pretreatment.md.",
+      "expected_output": "A rewritten manuscript in ACS SCE research-article form (title without puffery, self-contained abstract with no citations, added Synopsis + Keywords placeholders, ACS unit/number style, ACS reference format) with AI-tell vocabulary and unsupported 'novel/green/sustainable' claims removed, plus a change log and a list of open questions/missing items (e.g. mass balance, DES recovery quantification, comparison table with prior DES pretreatment work, TOC graphic, SI). No fabricated data.",
+      "files": ["evals/files/draft-des-pretreatment.md"]
+    },
+    {
+      "id": 2,
+      "prompt": "Here's our TEA/LCA manuscript for ACS Sustainable Chem. Eng. (draft-lca-tea-biorefinery.md). The writing is okay I think but I've never published in this journal — can you go through it against their requirements and reporting expectations for LCA/TEA papers and make the edits it needs? Keep our numbers, don't invent anything.",
+      "expected_output": "An edited manuscript that keeps all numbers, adds the ACS SCE required elements (Synopsis, Keywords, TOC graphic note, author info blocks), converts references to ACS style, and flags LCA/TEA reporting gaps as questions to the author: functional unit not stated, allocation/system-expansion method for co-products, uncertainty/sensitivity on LCA results, year/basis of Ecoinvent and GREET data, cost year, IRR/plant life assumptions consistency, and softens the unsupported 'sustainable and green route' closing claim into the quantified result. Change log included.",
+      "files": ["evals/files/draft-lca-tea-biorefinery.md"]
+    },
+    {
+      "id": 3,
+      "prompt": "draft-fdca-polyester-excerpt.txt — pasted the abstract + intro of our PEF copolyester paper. target journal is ACS sustainable chem & eng. make it publishable quality, no AI slop please, and flag anything the journal will push back on",
+      "expected_output": "Edited title, abstract and introduction in ACS SCE style with puffery ('novel', 'unprecedented', 'first report', 'paving the way') removed, claims tied to numbers, citations attached to the specific prior-work claims, a proposed Synopsis, and a note that the sustainability claim (fully bio-based, compostability) needs a standard/metric (e.g. ISO/ASTM compostability test named, bio-based carbon content) and that the journal will expect a comparison to the PEF-co-PBF literature. Should note it edited only the supplied sections and what the remaining sections will need.",
+      "files": ["evals/files/draft-fdca-polyester-excerpt.txt"]
+    }
+  ]
+}

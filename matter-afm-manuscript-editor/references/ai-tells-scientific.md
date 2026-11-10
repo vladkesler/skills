@@ -1,6 +1,6 @@
 # AI-sounding prose in materials papers: what it looks like and what to write instead
 
-Editors at Matter and Advanced Functional Materials read a great many drafts written or "polished" by a language model, and the pattern is easy to recognize. AFM's editors reject at the first screen papers that "need extensive improvement in the language"; Cell Press discourages the words "novel" and "first" in its guidelines. Prose that reads as generated tells an editor that nobody with judgment has gone through the paper, and it usually hides a claim that was never pinned down. This file lists the tells and, more usefully, what a well-written paper does in each place. Use it during the prose pass.
+Editors at Matter, Advanced Functional Materials and Carbohydrate Polymers read a great many drafts written or "polished" by a language model, and the pattern is easy to recognize. AFM's editors reject at the first screen papers that "need extensive improvement in the language"; Cell Press discourages the words "novel" and "first" in its guidelines; the Carbohydrate Polymers guide reminds authors that AI-generated references can be invented and that every reference must be a real source. Prose that reads as generated tells an editor that nobody with judgment has gone through the paper, and it usually hides a claim that was never pinned down. This file lists the tells and, more usefully, what a well-written paper does in each place. Use it during the prose pass.
 
 Two principles before the lists:
 
@@ -82,7 +82,7 @@ Cut the frame and start with the content. "As can be seen from Figure 2a, the te
 ## 3. Paragraph and section patterns
 
 - **Transition openers.** "Furthermore," "Moreover," "Additionally," "Consequently," "Notably," "Interestingly," beginning successive sentences or paragraphs. In a well-argued paper the logic is carried by the content; transitions are rare and mostly "however" and "because". More than one "furthermore" or "moreover" in a section is a tell.
-- **Introduction formula.** Paragraph 1: global importance with round numbers ("over 400 million tons of plastic"). Paragraph 2: "various strategies have been developed ... however, these suffer from ..." with an undifferentiated triple of drawbacks. Paragraph 3: "X has attracted tremendous attention owing to ...". Paragraph 4: "Herein, we report a novel ... To the best of our knowledge, this is the first ... This work not only ... but also provides new insights ...". Rewrite so that paragraph 2 names the specific prior results with their numbers, paragraph 3 says what is unknown or unsolved, and the last paragraph says what this paper did and found, with the key number. Both journals want the introduction to end on what was achieved.
+- **Introduction formula.** Paragraph 1: global importance with round numbers ("over 400 million tons of plastic"). Paragraph 2: "various strategies have been developed ... however, these suffer from ..." with an undifferentiated triple of drawbacks. Paragraph 3: "X has attracted tremendous attention owing to ...". Paragraph 4: "Herein, we report a novel ... To the best of our knowledge, this is the first ... This work not only ... but also provides new insights ...". Rewrite so that paragraph 2 names the specific prior results with their numbers, paragraph 3 says what is unknown or unsolved, and the last paragraph says what this paper did and found, with the key number. Matter and AFM want the introduction to end on what was achieved. Carbohydrate Polymers wants it to state the hypothesis the work tested, how that differs from the nearest earlier work, and why it matters; "Herein, we report" is not a hypothesis.
 - **Recap conclusions.** A paragraph that restates the abstract and ends on "paves the way". A conclusion states the two or three quantitative findings, what they mean, the main limitation, and what would have to be shown next.
 - **Challenges-and-outlook boilerplate.** "Despite these advances, challenges remain in scaling up ... future work should focus on ...". Name the specific obstacle with a number (the modulus halves above 70% relative humidity; the monomer costs ten times the petrochemical one) or omit.
 - **Uniform paragraph shape.** Claim, explanation, example, transition, repeated. Some paragraphs should be two sentences and a number.
@@ -109,7 +109,7 @@ Fabricated references are the most concrete sign of unchecked AI use, and publis
 - Citations that support a claim only generically ("hydrogels have been widely studied [3–9]") with seven references for a sentence that needs one specific one.
 - Mixed citation styles in one list, which suggests entries pasted from several sources.
 
-You usually cannot verify a reference from inside a chat. Do not "correct" a reference into something that looks plausible. Reformat what is given, and query any entry whose details are internally inconsistent or that you suspect does not exist: `[AUTHOR: reference 14: please check that this article exists and that the details are right]`.
+You usually cannot verify a reference from inside a chat. Do not "correct" a reference into something that looks plausible. Reformat what is given, and query any entry whose details are internally inconsistent or that you suspect does not exist: `[AUTHOR: reference 14: please check that this article exists and that the details are right]`. In an author–year list (Carbohydrate Polymers) name the entry by first author and year.
 
 ## 6. What good scientific prose does
 
@@ -129,16 +129,17 @@ Use this as the target when rewriting. The values are invented to show the form;
 Also:
 
 - One idea per paragraph, topic sentence first, 60–150 words typical; vary the length.
-- First person plural is fine in the main text of both journals where it clarifies who did what. The AFM abstract is the exception: impersonal, present tense.
+- First person plural is fine in the main text of all three journals where it clarifies who did what. The AFM abstract is the exception: impersonal, present tense.
 - Concessions add credibility: "The films lose half their modulus at 80% relative humidity" reads as a scientist writing; "excellent stability" reads as a press release.
 - Comparisons with prior work are specific and usually tabulated.
 - Sample names are fixed at first use and never varied, and they are readable: "PVA–lignin-15" tells the reader more than "sample S3".
 
 ## 7. Disclosure
 
-Both journals require authors to disclose the use of generative AI in preparing the manuscript, and both hold the authors responsible for every sentence and reference.
+All three journals require authors to disclose the use of generative AI in preparing the manuscript, and all hold the authors responsible for every sentence and reference.
 
 - **Matter (Cell Press, Elsevier policy):** a section titled "Declaration of generative AI and AI-assisted technologies in the manuscript preparation process", placed after the Declaration of interests, included when the paper is first submitted. Wording: "During the preparation of this work, the author(s) used [NAME TOOL / SERVICE] in order to [REASON]. After using this tool/service, the author(s) reviewed and edited the content as needed and take(s) full responsibility for the content of the published article." Basic grammar, spelling and reference checkers are exempt.
 - **AFM (Wiley):** "If an author has used a GenAI tool to develop any portion of a manuscript, its use must be described, transparently and in detail, in the Methods section (or via a disclosure or within the Acknowledgements section, as applicable)."
+- **Carbohydrate Polymers (Elsevier):** the same section title and template sentence as Matter, included when the paper is first submitted and placed before the reference list. Basic grammar, spelling and reference tools are exempt.
 
 An author whose paper was edited with this skill has used such a tool. Add the statement as a placeholder for the author to complete and confirm, say so in the to-do list, and do not treat it as optional. Removing AI-sounding prose is about making the paper say something specific; it is not a way around disclosure.

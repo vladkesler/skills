@@ -4,7 +4,7 @@ Agent Skills for preparing research papers for specific journals. Each folder is
 
 | Skill | For |
 |---|---|
-| [`matter-afm-manuscript-editor`](matter-afm-manuscript-editor/) | *Matter* (Cell Press) and *Advanced Functional Materials* (Wiley). Fit verdict, edited manuscript in the journal's layout, the journal's short pieces (Highlights, eTOC blurb, Progress and potential, MAP level; ToC text), cover letter, to-do list, checklist. |
+| [`matter-afm-manuscript-editor`](matter-afm-manuscript-editor/) | *Matter* (Cell Press), *Advanced Functional Materials* (Wiley) and *Carbohydrate Polymers* (Elsevier). Fit verdict, edited manuscript in the journal's layout, the journal's own pieces (Matter: Highlights, eTOC blurb, Progress and potential, MAP level; AFM: ToC text; Carbohydrate Polymers: hypothesis statement, polysaccharide characterization check, graphical-abstract layout), cover letter, to-do list, checklist. |
 | [`acs-sce-manuscript-editor`](acs-sce-manuscript-editor/) | *ACS Sustainable Chemistry & Engineering*. Edited manuscript in ACS style, sustainability-claim check, change log, author queries. |
 
 ## Using a skill
@@ -15,7 +15,9 @@ Once installed, open a chat, attach the paper as a Word file or paste its text, 
 
 > Is this ready for Advanced Functional Materials? Fix what you can.
 
-> Which suits this paper better, Matter or AFM?
+> Make this paper ready for Carbohydrate Polymers.
+
+> Which suits this paper best: Matter, AFM or Carbohydrate Polymers?
 
 Nothing else needs to be set up, and you never need to run anything yourself. The reply starts with a verdict and a numbered list of what is still needed from you, followed by the edited paper.
 
@@ -35,7 +37,7 @@ In Claude Code, copy the folder into `~/.claude/skills/`.
 
 1. Create a GPT (**Explore GPTs → Create → Configure**) or a Project.
 2. Paste the whole of [`matter-afm-manuscript-editor/chatgpt/instructions.md`](matter-afm-manuscript-editor/chatgpt/instructions.md) into the **Instructions** box. It is under the 8,000-character limit for GPTs.
-3. Upload these as knowledge or project files: the six files in `matter-afm-manuscript-editor/references/` and `matter-afm-manuscript-editor/scripts/manuscript_check.py`.
+3. Upload these as knowledge or project files: the seven files in `matter-afm-manuscript-editor/references/` and `matter-afm-manuscript-editor/scripts/manuscript_check.py`.
 4. Switch on **Code Interpreter & Data Analysis** so it can count lengths and produce a Word file.
 
 ## Keeping the journal rules current

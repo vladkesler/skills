@@ -1,10 +1,10 @@
 # Deliverable templates
 
-Formats for what the skill hands back, for Matter, Advanced Functional Materials (AFM) and Carbohydrate Polymers. The reader is a scientist who is not comfortable with software or with these journals' conventions, so the reply opens with the answer and the actions, and the detail follows. Scale to the input (table in SKILL.md, Deliver): a full manuscript gets every part; part of a paper gets the verdict, the to-do list, the edited part, a list of what the other sections will need and the change log; a pasted abstract gets the edited text with its count, two lines on fit and a few queries.
+Formats for what the skill hands back, for Matter, Advanced Materials, Advanced Functional Materials (AFM) and Carbohydrate Polymers. Advanced Materials and AFM share one layout and one set of extra pieces, so they share sections here. The reader is a scientist who is not comfortable with software or with these journals' conventions, so the reply opens with the answer and the actions, and the detail follows. Scale to the input (table in SKILL.md, Deliver): a full manuscript gets every part; part of a paper gets the verdict, the to-do list, the edited part, a list of what the other sections will need and the change log; a pasted abstract gets the edited text with its count, two lines on fit and a few queries.
 
-The Matter and AFM examples below describe a hypothetical paper on a lignin–poly(vinyl alcohol) hydrogel. The Carbohydrate Polymers examples describe a different hypothetical paper, on chitosan films, because a lignin paper is outside that journal's scope. All numbers are placeholders for the format. Never carry them into a real manuscript.
+The Matter, Advanced Materials and AFM examples below describe a hypothetical paper on a lignin–poly(vinyl alcohol) hydrogel. The Carbohydrate Polymers examples describe a different hypothetical paper, on chitosan films, because a lignin paper is outside that journal's scope. All numbers are placeholders for the format. Never carry them into a real manuscript.
 
-Contents: 1 Order of the reply · 2 Verdict · 3 "What you still need to do" · 4 Edited manuscript, Matter layout · 5 Edited manuscript, AFM layout · 6 Edited manuscript, Carbohydrate Polymers layout · 7 Matter's extra pieces · 8 AFM's extra pieces · 9 Carbohydrate Polymers' extra pieces · 10 Change log · 11 Checklist status · 12 Cover letters · 13 AI-use statements · 14 Plain-language glossary
+Contents: 1 Order of the reply · 2 Verdict · 3 "What you still need to do" · 4 Edited manuscript, Matter layout · 5 Edited manuscript, Advanced Materials and AFM layout · 6 Edited manuscript, Carbohydrate Polymers layout · 7 Matter's extra pieces · 8 Advanced Materials' and AFM's extra pieces · 9 Carbohydrate Polymers' extra pieces · 10 Change log · 11 Checklist status · 12 Cover letters · 13 AI-use statements · 14 Plain-language glossary
 
 ---
 
@@ -17,7 +17,7 @@ Contents: 1 Order of the reply · 2 Verdict · 3 "What you still need to do" · 
 5. Change log (§10)
 6. Checklist status (§11)
 
-If the chat can create files, put the edited manuscript in a .docx (and Matter's Highlights and eTOC blurb in a second, small .docx, because the journal wants them as a separate file), and keep parts 1, 2, 5 and 6 in the reply itself. If it cannot, give everything in the reply as text that pastes cleanly into Word, with the manuscript between two lines reading `START OF THE EDITED PAPER` and `END OF THE EDITED PAPER` so the author knows what to select. Use bold for headings inside it; a line such as "1. Introduction" must not turn into a numbered list, nor the corresponding-author line that starts with an asterisk into a bullet. If one reply cannot hold it all, send parts 1 and 2 with the title and abstract first, then the manuscript section by section, then parts 4–6, and end each message with one line telling the author what to type to get the next part.
+If the chat can create files, put the edited manuscript in a .docx (and Matter's Highlights and eTOC blurb in a second, small .docx, because the journal wants them as a separate file), and keep parts 1, 2, 5 and 6 in the reply itself. A .docx you write holds only the text you put in it: open it once to check that the whole paper is there, and name in the to-do list the figures, tables and equations the author must copy back from their original file. If it cannot, give everything in the reply as text that pastes cleanly into Word, with the manuscript between two lines reading `START OF THE EDITED PAPER` and `END OF THE EDITED PAPER` so the author knows what to select. Use bold for headings inside it; a line such as "1. Introduction" must not turn into a numbered list, nor the corresponding-author line that starts with an asterisk into a bullet. If one reply cannot hold it all, send parts 1 and 2 with the title and abstract first, then the manuscript section by section, then parts 4–6, and end each message with one line telling the author what to type to get the next part.
 
 Carbohydrate Polymers wants page numbers and continuous line numbers in the submitted file. If you write the .docx yourself and your tools can switch both on, do it and say so. Otherwise give the Word steps in the to-do list (example in §3).
 
@@ -29,7 +29,7 @@ Three or four sentences, no jargon about the tooling. State the journal, one of 
 - **Close. Fix these first.** The paper fits, and one or two gaps in evidence or framing would probably stop it at the editor's desk; rewriting, or data the authors already hold, can close them.
 - **Not ready yet.** Either the paper is the right kind for the journal but needs new measurements or comparisons before it would pass the editor, or it belongs in a different journal. Say which of the two it is.
 
-When the fit is poor, a second short paragraph may say what would change the verdict, whether another of the three journals or a more specialized one would suit better, and that the editor may offer a transfer. With only part of a paper, mark the verdict "on the parts I have seen" and do not treat unseen sections as missing evidence.
+When the fit is poor, a second short paragraph may say what would change the verdict, whether another of the four journals or a more specialized one would suit better, and that the editor may offer a transfer. For a paper aimed at Advanced Materials that is sound but not among the best reported, "not ready yet" is the level, and the journal it belongs in as it stands is usually AFM; say that the edited file serves both. With only part of a paper, mark the verdict "on the parts I have seen" and do not treat unseen sections as missing evidence.
 
 Examples:
 
@@ -45,6 +45,21 @@ title, summary and introduction around the idea, put the paper into Matter's lay
 drafted the pieces Matter asks for (Highlights, the short "In brief" text, the Progress and
 potential statement, a MAP level). None of your data were changed, and the change log quotes
 every claim I reworded.
+```
+
+```
+VERDICT (Advanced Materials): not ready yet. As it stands the paper belongs in Advanced
+Functional Materials.
+
+Advanced Materials uses the same format and rules as its sister journal Advanced Functional
+Materials (AFM) and selects the results it judges most important across materials science.
+Your hydrogel does what both journals look for: it performs a measured function (strain
+sensing) and a control experiment explains the toughening. What is missing for Advanced
+Materials is the evidence that the result stands out: there is no comparison with published
+tough hydrogels, and the paper does not say what the result makes possible beyond lignin
+gels. I have put the paper into the layout the two journals share, so this file serves
+either. Items 1 and 2 below would make the case for Advanced Materials; without them, AFM
+is the better target.
 ```
 
 ```
@@ -123,7 +138,7 @@ fill in the details, and read the whole paper before submitting: you are respons
 every sentence in it.
 ```
 
-Rules for this list: count the markers and give the true number (the script reports it); never list something you already did; keep each item to an action the author can take; put anything that needs a new experiment or measurement in the first group and say plainly that it is their decision whether to add it or to submit without it. Missing replicates and error values on key numbers belong in the first group for all three journals. When the edited paper went into a .docx, drop the copying paragraph. When figures or captions were not supplied, add one item asking the author to place each figure and its caption after the paragraph that first cites it.
+Rules for this list: count the markers and give the true number (the script reports it); never list something you already did; keep each item to an action the author can take; put anything that needs a new experiment or measurement in the first group and say plainly that it is their decision whether to add it or to submit without it. Missing replicates and error values on key numbers belong in the first group for all four journals. For Advanced Materials the first group also holds the comparison with the best published values and, when the draft gives no basis for it, the statement of what the result makes possible. When the edited paper went into a .docx, drop the copying paragraph. When figures or captions were not supplied, add one item asking the author to place each figure and its caption after the paragraph that first cites it.
 
 **Carbohydrate Polymers.** The first group holds the scope, characterization and hypothesis items. The third group is almost empty, because this journal wants its format, the graphical abstract and the declarations with the first submission; say so in one line. The copying, marker and AI paragraphs are the same as above.
 
@@ -246,9 +261,9 @@ Then, marked as a separate file: Highlights, eTOC blurb, Progress and potential,
 
 If the draft names authors in the text ("Wang et al. reported ...") but has no reference numbers anywhere, do not mark every sentence. Put one marker at the head of the Introduction, `[AUTHOR: the text has no reference numbers; add a numbered citation wherever earlier work or a literature value is mentioned]`, and one item in the to-do list.
 
-## 5. Edited manuscript, AFM layout
+## 5. Edited manuscript, Advanced Materials and AFM layout
 
-Follows the journal's template order. Section headings are numbered. Citations as numbers in square brackets.
+One layout for both journals; it follows the template they share. Section headings are numbered. Citations as numbers in square brackets.
 
 ```
 <Title in Title Case: Descriptive, With the Material and Its Function, No Formulae>
@@ -312,7 +327,7 @@ Table of Contents
 <ToC graphic: 55 mm × 50 mm or 110 mm × 20 mm. [AUTHOR: supply; layout suggested below]>
 ```
 
-For a first (free-format) submission the journal also wants a title page: the first page of the manuscript file, carrying the title, every co-author's affiliation and email, and the data availability, funding and conflict-of-interest statements. The layout above already holds all of these; remind the author to add each co-author's email. Citation numbers in plain text go in square brackets after the punctuation ("... reported previously.[12]").
+For a first (free-format) submission both journals also want a title page: the first page of the manuscript file, carrying the title, every co-author's affiliation and email, and the data availability, funding and conflict-of-interest statements. The layout above already holds all of these; remind the author to add each co-author's email. Citation numbers in plain text go in square brackets after the punctuation ("... reported previously.[12]").
 
 ## 6. Edited manuscript, Carbohydrate Polymers layout
 
@@ -466,7 +481,9 @@ Keep text to a few words in Arial; no data plots.
 [AUTHOR: check the exact size and file type in the Cell Press graphical abstract guide.]
 ```
 
-## 8. AFM's extra pieces
+## 8. Advanced Materials' and AFM's extra pieces
+
+The same two pieces at both journals, with the same limits.
 
 **ToC text** (50 to 60 words; third person; general audience; describes the main results):
 
@@ -478,7 +495,7 @@ energy, doubling the toughness to 3.2 MJ m⁻³, and re-form within 30 minutes. 
 from the gel tracks finger bending over 1,000 cycles with a gauge factor of 4.2.   (54 words)
 ```
 
-Material and function first, then the mechanism or the number, then the demonstration. No "we", no "novel".
+Material and function first, then the mechanism or the number, then the demonstration. No "we", no "novel". For Advanced Materials, let the last sentence carry what the result makes possible, if the paper shows it.
 
 **ToC graphic** (a described layout only):
 
@@ -629,7 +646,7 @@ Journal style
 
 ## 11. Checklist status
 
-From §11 of the journal's requirements file; the format is the same for all three journals. Mark `[x]` done, `[~]` drafted or placeholder added, `[ ]` missing, `[-]` does not apply to this paper. A counted item that still holds a marker is `[~]`. Keep the two-stage split for Matter and AFM, because it tells the author what can wait. For Carbohydrate Polymers nothing can wait, so its two headings are "Decides whether the editor sends the paper to reviewers" and "Format and files, all needed for the first submission"; give the counted length (words excluding references, number of figures and tables) on its line.
+From §11 of the journal's requirements file; the format is the same for all four journals (Advanced Materials and AFM use one list; put the journal's name in the heading). Mark `[x]` done, `[~]` drafted or placeholder added, `[ ]` missing, `[-]` does not apply to this paper. A counted item that still holds a marker is `[~]`. Keep the two-stage split for Matter, Advanced Materials and AFM, because it tells the author what can wait. For Carbohydrate Polymers nothing can wait, so its two headings are "Decides whether the editor sends the paper to reviewers" and "Format and files, all needed for the first submission"; give the counted length (words excluding references, number of figures and tables) on its line.
 
 ```
 SUBMISSION CHECKLIST: Matter, research article
@@ -695,13 +712,13 @@ Sincerely,
 [Lead contact: name, position, institution, email]
 ```
 
-**AFM** (no prescribed content, except that a previous rejection by the journal must be disclosed with the changes made):
+**Advanced Materials and AFM** (no prescribed content, except that a previous rejection by the journal must be disclosed with the changes made). One skeleton; the paragraph marked "Advanced Materials only" is where that journal's higher bar is argued, and it is left out for AFM:
 
 ```
 Dear Editor,
 
-We submit the manuscript "[Title]" for consideration as a Research Article in Advanced
-Functional Materials.
+We submit the manuscript "[Title]" for consideration as a Research Article in [Advanced
+Materials / Advanced Functional Materials].
 
 [What the material is and what it does: two sentences with the key functional number and the
 conditions.]
@@ -710,6 +727,11 @@ conditions.]
 differs, and what makes the difference possible. One reference or two.]
 
 [Why the journal's readers beyond this specialty would be interested: one sentence.]
+
+[Advanced Materials only. Where the result stands and what it makes possible: the best
+published value it exceeds, with the reference, and in one sentence what a researcher working
+on a different class of material can now do. From the paper only; if the paper does not show
+it, this paragraph is an [AUTHOR: ...] marker and the first item of the to-do list.]
 
 [Related manuscripts and preprint, if any. If an earlier version was rejected by this journal:
 say so, give the manuscript number and list the changes.]
@@ -751,7 +773,7 @@ Sincerely,
 [Corresponding author: name, position, institution, email]
 ```
 
-Fill the bracketed parts from the paper where the paper supplies them; leave `[AUTHOR: ...]` for the rest (editor's name, related manuscripts, reviewers). In the Carbohydrate Polymers letter, name only characterization that the manuscript reports; if it is missing, the sentence is a marker, and the missing data are the first item of the to-do list.
+Fill the bracketed parts from the paper where the paper supplies them; leave `[AUTHOR: ...]` for the rest (editor's name, related manuscripts, reviewers). The guide asks for a previous rejection to be disclosed only when it came from the journal now being submitted to. If an Advanced Materials editor recommended a transfer to AFM, the author follows the instructions in that decision email. In the Carbohydrate Polymers letter, name only characterization that the manuscript reports; if it is missing, the sentence is a marker, and the missing data are the first item of the to-do list.
 
 ## 13. AI-use statements
 
@@ -768,7 +790,7 @@ edited the content as needed and take full responsibility for the content of the
 article.
 ```
 
-AFM, in the Acknowledgements (or the Experimental Section); the journal gives no fixed sentence, only that the use "must be described, transparently and in detail":
+Advanced Materials and AFM, in the Acknowledgements (or the Experimental Section); the guide gives no fixed sentence, only that the use "must be described, transparently and in detail":
 
 ```
 The authors used <assistant name> [AUTHOR: confirm the name of the AI assistant and add its
@@ -795,23 +817,24 @@ Use these explanations the first time a term appears in the reply. One line each
 | Graphical abstract | One picture that shows the main message; made by the authors. Square for Matter; wide for Carbohydrate Polymers, which wants it with the first submission. |
 | Resource availability | A required section saying how others can obtain your materials, data and code. |
 | Declaration of interests | A statement, plus a form, about financial or other interests related to the work. |
-| Supplemental information (Matter) / Supporting Information (AFM) / Supplementary material (Carbohydrate Polymers) | The extra file with additional figures and data, published online with the paper. At Carbohydrate Polymers the methods may not be put there. |
-| ToC entry (AFM) | A 50–60-word text and a small picture shown in the journal's table of contents. |
+| Supplemental information (Matter) / Supporting Information (Advanced Materials, AFM) / Supplementary material (Carbohydrate Polymers) | The extra file with additional figures and data, published online with the paper. At Carbohydrate Polymers the methods may not be put there. |
+| ToC entry (Advanced Materials, AFM) | A 50–60-word text and a small picture shown in the journal's table of contents. |
 | Data Availability Statement | One sentence saying where the data behind the paper can be found. |
 | Statistical Analysis subsection | A short paragraph at the end of the Experimental Section on sample numbers and tests. |
 | ORCID iD | A free personal researcher number from orcid.org; the journal asks for it when you submit. |
-| Editorial Manager / Wiley Authors | The websites where the files are uploaded (Matter and Carbohydrate Polymers / AFM). |
-| Free-format submission | The first version may be in any layout; the journal's layout is required only when you revise. Matter and AFM offer this; Carbohydrate Polymers does not. |
+| Editorial Manager / Wiley Authors | The websites where the files are uploaded (Matter and Carbohydrate Polymers / Advanced Materials and AFM). |
+| Free-format submission | The first version may be in any layout; the journal's layout is required only when you revise. Matter, Advanced Materials and AFM offer this; Carbohydrate Polymers does not. |
 | Presubmission inquiry (Matter) | An email to the editors with the title and abstract asking whether the paper suits the journal. |
 | Desk rejection | A decision by the editor, without reviewers, that the paper does not fit the journal. |
 | Point-by-point response | The letter sent with a revised paper answering each reviewer comment in turn. |
 | CRediT | A standard list of roles (conceptualization, investigation, writing ...) used to describe who did what. Carbohydrate Polymers requires a statement in this form. |
 | Marker | A note from me inside your text, written [AUTHOR: ...], at a place where only you have the information. |
 | Cover letter | A half-page letter to the editor, uploaded with the paper, saying what the paper shows and why it suits the journal. |
-| Title page (AFM) | The first page of the manuscript file: title, all authors with affiliations and emails, and the required statements. |
+| Title page (Advanced Materials, AFM) | The first page of the manuscript file: title, all authors with affiliations and emails, and the required statements. |
 | Title Case | Capital first letters on the main words of a title. |
 | DOI | The permanent identifier of an article or data set, starting with "10."; it goes at the end of each reference. |
-| Transfer | An offer from the editor to pass a declined paper to a sister journal of the same publisher. |
+| Transfer | An offer from the editor to pass a declined paper to a sister journal of the same publisher. Wiley calls it Refer & Transfer; from Advanced Materials the offer may be AFM, which uses the same format. |
+| Benchmark comparison | A table or chart in the paper that sets your key numbers beside the best published ones, with references. |
 | Hypothesis statement (Carbohydrate Polymers) | One sentence in the Introduction saying what you expected to find and set out to test. |
 | Characterization of the polysaccharide (Carbohydrate Polymers) | The basic data on the polysaccharide you used (purity, molecular weight, degree of substitution or deacetylation ...), given in the Materials section even for a bought product. |
 | Certificate of analysis | The supplier's sheet of measured values for the batch you bought; ask the supplier for it by batch number. |

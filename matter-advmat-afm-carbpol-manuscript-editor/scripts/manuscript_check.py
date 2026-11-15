@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """
 manuscript_check.py - mechanical pre-edit scan for drafts aimed at Matter (Cell Press),
-Advanced Functional Materials (Wiley) or Carbohydrate Polymers (Elsevier).
+Advanced Materials or Advanced Functional Materials (Wiley), or Carbohydrate Polymers (Elsevier).
 
 Usage (python3; plain "python" also works where it exists):
-    python3 manuscript_check.py <manuscript.docx|.md|.txt> --journal matter|afm|carbpol [--json]
+    python3 manuscript_check.py <manuscript.docx|.md|.txt> --journal matter|advmat|afm|carbpol [--json]
     python3 manuscript_check.py --count [file]     # characters and words per line (stdin if no file)
 
 Stdlib only (reads .docx through zipfile). The assistant runs this itself when it has a
@@ -20,7 +20,8 @@ What it reports:
       Matter: title <= 145 characters, Summary <= 150 words, <= 10 keywords, <= 4 Highlights
               of <= 85 characters each, eTOC blurb <= 50 words, Progress and potential
               <= 300 words (and <= 1,000 characters on one of the journal's pages)
-      AFM:    abstract <= 200 words, 3-7 keywords, ToC text 50-60 words
+      Advanced Materials and AFM (one shared guide, so "advmat" and "afm" run the same
+              checks): abstract <= 200 words, 3-7 keywords, ToC text 50-60 words
       Carbohydrate Polymers: abstract <= 200 words, 3-6 keywords, text <= 8,000 words
               excluding references, about 15 figures and tables, optional Highlights
               (3-5 of <= 85 characters each)
@@ -51,6 +52,31 @@ from xml.etree import ElementTree as ET
 
 NOW, LATER = "needed at first submission", "needed by revision or acceptance"
 
+# Advanced Materials and Advanced Functional Materials publish one author guide, so one
+# profile serves both; only the journal's name differs.
+WILEY_ADVANCED = {
+    "abstract_label": "Abstract",
+    "abstract_max": 200,
+    "keywords": (3, 7),
+    "body_typical": (3000, 8000),
+    "required": [
+        ("Abstract (200 words max, present tense, impersonal)", r"^\W*(abstract|summary)\b", NOW),
+        ("Introduction", r"^\W*(\d[\d.]*\s+)?introduction\b", NOW),
+        ("Conclusion", r"^\W*(\d[\d.]*\s+)?conclusions?\b", NOW),
+        ("Experimental Section / Methods", r"^\W*(\d[\d.]*\s+)?(experimental|methods|materials and methods)\b", NOW),
+        ("Corresponding author's institutional email (and an email for every co-author)", r"[\w.+-]+@[\w-]+\.[\w.-]+", NOW),
+        ("Data Availability Statement (required)", r"data availability", NOW),
+        ("Conflict of Interest statement", r"conflicts? of interest|competing interests?", NOW),
+        ("Funding statement / Acknowledgements", r"acknowledge?ments?|funding|grant", NOW),
+        ("References", r"^\W*(\d[\d.]*\s+)?references\b", NOW),
+        ("Keywords (3 to 7)", r"^\W*keywords?\b", LATER),
+        ("'Statistical Analysis' subsection at the end of the Experimental Section", r"statistical analysis", LATER),
+        ("Supporting Information line", r"supporting information", LATER),
+        ("Table of Contents text (50-60 words)", r"table of contents|\btoc\b", LATER),
+    ],
+}
+WILEY = ("advmat", "afm")
+
 PROFILES = {
     "matter": {
         "name": "Matter (Cell Press)",
@@ -78,28 +104,8 @@ PROFILES = {
             ("References", r"^\W*(\d[\d.]*\s+)?references\b", LATER),
         ],
     },
-    "afm": {
-        "name": "Advanced Functional Materials (Wiley)",
-        "abstract_label": "Abstract",
-        "abstract_max": 200,
-        "keywords": (3, 7),
-        "body_typical": (3000, 8000),
-        "required": [
-            ("Abstract (200 words max, present tense, impersonal)", r"^\W*(abstract|summary)\b", NOW),
-            ("Introduction", r"^\W*(\d[\d.]*\s+)?introduction\b", NOW),
-            ("Conclusion", r"^\W*(\d[\d.]*\s+)?conclusions?\b", NOW),
-            ("Experimental Section / Methods", r"^\W*(\d[\d.]*\s+)?(experimental|methods|materials and methods)\b", NOW),
-            ("Corresponding author's institutional email (and an email for every co-author)", r"[\w.+-]+@[\w-]+\.[\w.-]+", NOW),
-            ("Data Availability Statement (required)", r"data availability", NOW),
-            ("Conflict of Interest statement", r"conflicts? of interest|competing interests?", NOW),
-            ("Funding statement / Acknowledgements", r"acknowledge?ments?|funding|grant", NOW),
-            ("References", r"^\W*(\d[\d.]*\s+)?references\b", NOW),
-            ("Keywords (3 to 7)", r"^\W*keywords?\b", LATER),
-            ("'Statistical Analysis' subsection at the end of the Experimental Section", r"statistical analysis", LATER),
-            ("Supporting Information line", r"supporting information", LATER),
-            ("Table of Contents text (50-60 words)", r"table of contents|\btoc\b", LATER),
-        ],
-    },
+    "advmat": dict(WILEY_ADVANCED, name="Advanced Materials (Wiley)"),
+    "afm": dict(WILEY_ADVANCED, name="Advanced Functional Materials (Wiley)"),
     "carbpol": {
         "name": "Carbohydrate Polymers (Elsevier)",
         "abstract_label": "Abstract",
@@ -131,7 +137,10 @@ PROFILES = {
 }
 
 JOURNAL_ALIASES = {
-    "advanced functional materials": "afm", "adfm": "afm", "adv funct mater": "afm",
+    "advanced materials": "advmat", "advanced-materials": "advmat", "adv mater": "advmat", "adv. mater.": "advmat",
+    "advmater": "advmat", "adv-mat": "advmat", "adma": "advmat",
+    "advanced functional materials": "afm", "advanced-functional-materials": "afm", "adfm": "afm",
+    "adv funct mater": "afm", "adv. funct. mater.": "afm",
     "carbohydrate polymers": "carbpol", "carbohydr polym": "carbpol", "carbohydr. polym.": "carbpol",
     "carbpolym": "carbpol", "cp": "carbpol", "carp": "carbpol",
 }
@@ -524,7 +533,7 @@ def limits(journal, lines, headings):
                          "avoid; if one is essential, give authors and year" if journal == "carbpol" else "none allowed", "FIX", ""))
         if not re.search(r"\d", abstract):
             rows.append((label + " numbers", "no numbers", "state the key quantitative result", "check", ""))
-        if journal == "afm":
+        if journal in WILEY:
             fp = FIRST_PERSON.findall(abstract)
             if fp:
                 rows.append(("Abstract voice", "%d first-person words (we/our)" % len(fp), "impersonal, present tense", "FIX", ""))
@@ -591,7 +600,9 @@ def limits(journal, lines, headings):
             w = n_words(et)
             protected = re.sub(r"\b(et al|e\.g|i\.e|vs|ca|Fig|Dr|Prof)\.", r"\1", et.strip())
             sents = len([s for s in re.split(r"(?<=[.!?])\s+", protected) if s.strip()])
-            rows.append(("eTOC blurb", "%d words, %d sentences" % (w, sents), "<= 50 words, 2 sentences", "ok" if w <= 50 else "OVER", ""))
+            status = "OVER" if w > 50 else ("ok" if sents == 2 else "check")
+            rows.append(("eTOC blurb", "%d words, %d sentences" % (w, sents), "<= 50 words, 2 sentences", status,
+                         "" if sents == 2 else "the journal asks for two sentences: the context, then who showed what"))
             if FIRST_PERSON.search(et):
                 rows.append(("eTOC voice", "first person found", "third person (no we/I)", "FIX", ""))
         pp, _ = section_text(lines, headings, "pandp")
@@ -738,7 +749,7 @@ def style_checks(journal, text, lines, headings):
             notes.append("scope: " + s + " (check the role this plays in the paper)")
     else:
         if author_year:
-            notes.append("%d author–year citations: Matter and AFM use numbered citations in order of first appearance" % author_year)
+            notes.append("%d author–year citations: this journal uses numbered citations in order of first appearance" % author_year)
         if fig_abbr:
             notes.append("%d uses of 'Fig.': write 'Figure' in full" % fig_abbr)
     if journal == "matter":
@@ -756,13 +767,13 @@ def style_checks(journal, text, lines, headings):
             notes.append("%d lower-case panel callouts (Figure 2a): Cell Press figures use capital panel letters (Figure 2A)" % lower_panel)
         if re.search(r"(?i)\backnowledgements\b", text):
             notes.append("'Acknowledgements': US spelling 'Acknowledgments' at Cell Press")
-    elif journal == "afm":
+    elif journal in WILEY:
         if not numbered_main and len(headings) >= 4:
-            notes.append("section headings are not numbered: the AFM template numbers them (1. Introduction, 2. Results and Discussion, 3. Conclusion, 4. Experimental Section)")
+            notes.append("section headings are not numbered: the Wiley Advanced template numbers them (1. Introduction, 2. Results and Discussion, 3. Conclusion, 4. Experimental Section)")
         if re.search(r"(?i)supplemental information|supplementary information", text):
             notes.append("'Supplemental/Supplementary Information': the Wiley term is 'Supporting Information'")
         if upper_panel and upper_panel > lower_panel:
-            notes.append("%d capital panel callouts (Figure 2A): AFM labels panels with lower-case letters (Figure 2a)" % upper_panel)
+            notes.append("%d capital panel callouts (Figure 2A): Advanced Materials and AFM label panels with lower-case letters (Figure 2a)" % upper_panel)
         slash = SLASH_UNITS.findall(text)
         if slash:
             ex = ", ".join(sorted(set(s.strip() for s in slash))[:6])
@@ -783,10 +794,10 @@ def style_checks(journal, text, lines, headings):
         notes.append("%d 'Name et al.' mentions but no reference numbers in the text: citations are missing or were lost in pasting" % named)
     if re.search(r"(?i)\bproprietary\b|\bconfidential\b|\btrade secret\b|\bundisclosed\b", text):
         notes.append("a material is described as proprietary/undisclosed: every composition must be given"
-                     + (" (AFM may return such papers without review)" if journal == "afm" else " for the work to be reproducible"))
+                     + (" (Advanced Materials and AFM may return such papers without review)" if journal in WILEY else " for the work to be reproducible"))
     if re.search(r"(?i)\bvolunteers?\b|\bparticipants?\b|\bpanell?ists?\b|\bhuman subjects?\b|\bwearer\b|\bon (?:the|a) (?:human )?(?:skin|finger|wrist|throat|arm|hand)\b", text) \
             and not re.search(r"(?i)ethic|informed consent|institutional review|\bIRB\b|helsinki", text):
-        notes.append("tests on a person are described but there is no ethics-approval and informed-consent statement (required by all three journals, including for wearable-sensor tests and sensory panels)")
+        notes.append("tests on a person are described but there is no ethics-approval and informed-consent statement (required by all four journals, including for wearable-sensor tests and sensory panels)")
 
     if journal != "carbpol":
         brit = []
@@ -799,7 +810,7 @@ def style_checks(journal, text, lines, headings):
                     brit.append((i, w))
         if brit:
             ex = ", ".join(sorted(set(w.lower() for _, w in brit))[:10])
-            notes.append("%d British spellings (%s): Matter and AFM ask for American English" % (len(brit), ex))
+            notes.append("%d British spellings (%s): this journal asks for American English" % (len(brit), ex))
     return notes
 
 
@@ -1023,7 +1034,10 @@ def report(a):
     else:
         o.append("\n- Main text (Introduction to References): about %d words, %d numbered display items cited. Typical for this journal: %d–%d words%s. No hard limit; length must be justified by the science."
                  % (b["body_words"], b["display_items"], b["typical"][0], b["typical"][1],
-                    ", 3–8 display items" if a["key"] == "afm" else ""))
+                    ", 3–8 display items" if a["key"] in WILEY else ""))
+    if a["key"] == "advmat":
+        o.append("- The format is shared with AFM, so this scan cannot tell the two journals apart. Whether the paper meets Advanced "
+                 "Materials' higher bar is a judgment: answer fit question 6 in references/audience-and-fit.md.")
     o.append("")
 
     o.append("## Elements not found\n")
@@ -1088,8 +1102,8 @@ def report(a):
             o.append("- **mixed reference styles** — make the list consistent")
         if a["key"] == "matter":
             o.append("- Matter format: Surname, I., and Surname, I. (Year). Title. J. Abbrev. vol, pages. DOI — 'et al.' only after 10 authors")
-        elif a["key"] == "afm":
-            o.append("- AFM accepts any one consistent style at submission; every entry needs the article title")
+        elif a["key"] in WILEY:
+            o.append("- Advanced Materials and AFM accept any one consistent style at submission; every entry needs the article title")
         else:
             o.append("- Carbohydrate Polymers format (APA 7th): Surname, A. B., & Surname, C. D. (Year). Title. Full Journal Name, volume, pages. https://doi.org/... — alphabetical by first author, not numbered")
             if r["numbered_entries"] > r["count"] / 2:
@@ -1111,10 +1125,11 @@ def report(a):
                     o.append("- every citation has a list entry and every entry is cited")
         o.append("- entries without a DOI: %d" % r["without_doi"])
         if r["compound"] and a["key"] != "carbpol":
-            o.append("- %d entries look like compound references (a, b ...): one work per number at Matter and AFM" % r["compound"])
+            o.append("- %d entries look like compound references (a, b ...): one work per number at this journal" % r["compound"])
         if r["with_et_al"]:
             rule = {"matter": "Matter lists up to 10 authors before 'et al.'",
-                    "afm": "the AFM guide lists all authors, or three then 'et al.' when there are more than six",
+                    "advmat": "the Wiley guide lists all authors, or three then 'et al.' when there are more than six",
+                    "afm": "the Wiley guide lists all authors, or three then 'et al.' when there are more than six",
                     "carbpol": "APA lists up to 20 authors"}[a["key"]]
             o.append("- entries using 'et al.': %d (%s; do not add names from memory, ask the author)" % (r["with_et_al"], rule))
     o.append("")
@@ -1159,7 +1174,7 @@ def main():
             del args[i:i + 2]
     journal = JOURNAL_ALIASES.get(journal, journal)
     if journal not in PROFILES:
-        print("Give the target journal: --journal matter | afm | carbpol", file=sys.stderr)
+        print("Give the target journal: --journal matter | advmat | afm | carbpol", file=sys.stderr)
         sys.exit(2)
     paths = [x for x in args if not x.startswith("--")]
     if not paths:

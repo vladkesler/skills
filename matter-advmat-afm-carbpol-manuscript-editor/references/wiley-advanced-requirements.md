@@ -1,6 +1,8 @@
-# Advanced Functional Materials (Wiley): what the journal requires
+# Advanced Materials and Advanced Functional Materials (Wiley): what the journals require
 
-Compiled on 10 Nov 2026 from the journal's own pages at advanced.onlinelibrary.wiley.com/hub/journal/16163028: Author Guidelines (tabs Guide for Authors, Article Types, Editorial Policies, Data Reporting Checklists, Graphics) and Overview. Quoted text is the journal's wording. Items marked *(template)* follow the journal's Word template and published articles and were not re-read line by line; the author should open the current template to confirm them. Guidelines change: when a requirement decides whether the paper is accepted or returned, tell the author to confirm it on the live page.
+The two journals belong to Wiley's "Advanced" family and publish one author guide. The tabs Guide for Authors, Article Types, Editorial Policies, Data Reporting Checklists and Graphics carry the same text at both journals, and every rule quoted below was found on both journals' pages. §2–§11 therefore apply to both, and a manuscript prepared for one needs no reformatting for the other. What differs is the journal itself (§1) and how high its editors set the bar, which is the subject of `audience-and-fit.md` §2 and §3.
+
+Compiled from the journals' own pages at advanced.onlinelibrary.wiley.com: Advanced Functional Materials (hub/journal/16163028) read on 10 Nov 2026, Advanced Materials (hub/journal/15214095) read on 15 Nov 2026. For each: the Author Guidelines tabs, the Overview page and the journal's home page. Quoted text is the journals' wording. Items marked *(template)* follow the family's Word template and published articles and were not re-read line by line; the author should open the current template to confirm them. Guidelines change: when a requirement decides whether the paper is accepted or returned, tell the author to confirm it on the live page.
 
 Contents: 1 Journal facts · 2 Article types and length · 3 What is needed at each stage · 4 Manuscript components in order · 5 Table of Contents entry · 6 Style and references · 7 Figures and tables · 8 Policies that affect the text · 9 Cover letter · 10 Why papers are declined without review · 11 Submission checklist
 
@@ -8,13 +10,29 @@ Contents: 1 Journal facts · 2 Article types and length · 3 What is needed at e
 
 ## 1. Journal facts
 
-- *Advanced Functional Materials*, abbreviated "Adv. Funct. Mater.", commonly AFM; Wiley-VCH; weekly (52 issues a year). Part of the Wiley "Advanced" family with *Advanced Materials*, *Small*, *Advanced Science*, *Advanced Materials Technologies*, *Macromolecular Rapid Communications* and others.
-- Aims and scope: "reports breakthrough research in all aspects of materials science, including nanotechnology, chemistry, physics, and biology."
-- Readership, as the journal lists it: "Materials scientists, chemists, physicists, ceramicists, engineers, metallurgists."
+Where the two journals differ (journal pages, 15 Nov 2026):
+
+| | Advanced Materials | Advanced Functional Materials |
+|---|---|---|
+| Abbreviation | "Adv. Mater." | "Adv. Funct. Mater."; commonly AFM |
+| Place in the family | "the foundation of the Advanced portfolio"; in plain words, its flagship | "a top-tier materials science journal" in the same portfolio |
+| Aims and scope | "carefully selected, top-quality Research Articles, Reviews, and Perspectives at the cutting edge of the chemistry and physics of functional materials"; "One key to the success of Advanced Materials is its pronounced interdisciplinarity." | "reports breakthrough research in all aspects of materials science, including nanotechnology, chemistry, physics, and biology." |
+| What the home page says it publishes | "the most important discoveries on any and all materials from materials scientists, chemists, physicists, engineers as well as health and life scientists" | "outstanding research related to improving chemical and physical properties of materials" |
+| Acceptance rate | 15% | 18% |
+| Submission to first decision, median | 14 days | 9 days |
+| Journal Impact Factor; CiteScore | 29.1; 42 | 19.9; 28.7 |
+
+The numbers are the journals' own and change every year. Give them to the author as the journal's figures on that date, never as the chance that their paper is accepted.
+
+What the two journals share:
+
+- Publisher Wiley-VCH; weekly (52 issues a year). Sister titles in the family include *Small*, *Advanced Science*, *Advanced Healthcare Materials*, *Advanced Materials Interfaces* and *Macromolecular Rapid Communications*.
+- Readership, listed in the same words by both: "Materials scientists, chemists, physicists, ceramicists, engineers, metallurgists."
 - The guide's opening instruction: "Contributors should bear in mind the interdisciplinary nature of the readership ... and, when applicable, emphasize the importance of the topic being presented to the research community, extending beyond specialists in the field."
 - Submission system: "Wiley Authors" (the link "Start your submission" on the journal page). Submissions begun before 25 Nov 2025 were handled in Editorial Manager.
 - Manuscripts are handled by "professional in-house editors", sent to at least two reviewers, single-anonymous review.
-- The journal provides a Manuscript Preparation Checklist, a Word template and a LaTeX template on the Author Guidelines page. The author does not need the template for a first submission; mention that it exists and shows every section in place, for when they revise.
+- Both take part in Wiley's Refer & Transfer program: "If your manuscript is not accepted, you may receive a recommendation to transfer your manuscript to another suitable Wiley journal". Because the format is shared, a paper moved between these two journals needs a new cover letter and nothing else.
+- A Manuscript Preparation Checklist, a Word template and a LaTeX template are on the Author Guidelines page. The author does not need the template for a first submission; mention that it exists and shows every section in place, for when they revise.
 
 ## 2. Article types and length
 
@@ -37,7 +55,7 @@ Contents: 1 Journal facts · 2 Article types and length · 3 What is needed at e
 
 ## 3. What is needed at each stage
 
-The journal offers **Free Format submission** for new papers: "You do not need to reformat your manuscript for a new submission. However, authors are requested to follow the guidelines presented here when preparing their Revised Manuscripts."
+Both journals offer **Free Format submission** for new papers: "You do not need to reformat your manuscript for a new submission. However, authors are requested to follow the guidelines presented here when preparing their Revised Manuscripts."
 
 | Stage | Needed |
 |---|---|
@@ -46,7 +64,7 @@ The journal offers **Free Format submission** for new papers: "You do not need t
 
 Two warnings from the guide that apply at first submission: "If the manuscript, figures or tables are difficult for you to read, they will also be difficult for the editors and reviewers, and the editorial office will send it back to you for revision. Your manuscript may also be sent back to you for revision if the quality of English language is poor."
 
-Editing advice that follows: format to §4 now (it is the format of the template the journal asks authors to use), and tell the author which items are needed today and which at revision.
+Editing advice that follows: format to §4 now (it is the format of the template the journals ask authors to use), and tell the author which items are needed today and which at revision.
 
 ## 4. Manuscript components, in the journal's order
 
@@ -60,7 +78,7 @@ Editing advice that follows: format to §4 now (it is the format of the template
 
 **Keywords.** 3 to 7.
 
-**Abstract.** Required. "Should not exceed 200 words and should be written in the present tense and impersonal style (i.e., avoiding we). Abbreviations must be defined when first used and the abstract should not contain any references." This is the one element the journal says must be correctly styled even in a free-format submission. "We synthesized a hydrogel that showed ..." becomes "A hydrogel is synthesized that shows ..." or, better, a sentence with the material as the subject: "The hydrogel stretches to 1200% strain and recovers ...".
+**Abstract.** Required. "Should not exceed 200 words and should be written in the present tense and impersonal style (i.e., avoiding we). Abbreviations must be defined when first used and the abstract should not contain any references." This is the one element the guide says must be correctly styled even in a free-format submission. "We synthesized a hydrogel that showed ..." becomes "A hydrogel is synthesized that shows ..." or, better, a sentence with the material as the subject: "The hydrogel stretches to 1200% strain and recovers ...".
 
 **Main text.** Sections with numbered headings *(template)*: 1. Introduction; 2. Results and Discussion (with numbered subsections 2.1, 2.2); 3. Conclusion; 4. Experimental Section (the template also allows "Methods"). The Introduction should summarize "the objectives and main conclusions of the work". The Conclusion summarizes what can be concluded; it should not copy the abstract.
 
@@ -142,9 +160,10 @@ Do not generate the image. Wiley states that generative AI tools should not be u
 Format, from the guide's examples:
 
 - Journal article: `H. Hussein, A. Damdam, L. Ren, et al., “Actuation of Mobile Microbots: A Review,” Advanced Intelligent Systems 5, no. 9 (2023): 2300168. https://doi.org/10.1002/aisy.202300168`
+- Journal article published online before it has a volume: the same layout, with the year and the article number straight after the journal name: `... ,” Advanced Functional Materials (2025): 2422499, https://doi.org/10.1002/adfm.202422499`
 - Conference paper: `J. Rutten, “Solar Chromosphere Observations and Models,” in The Physics of Chromospheric Plasmas, ed. P. Heinzel, I. Dorotovic, and R. J. Rutten, ASP Conference Series 368 (2007): 27.`
 
-Editing rule: if the author's list is already complete and consistent in another style, leave the style alone and say so; the journal accepts it. Convert a mixed list to the layout of the guide's journal-article example above. Keep each journal name and each title's capitalization as the author wrote it (the typesetters standardize these), keep "et al." where the author used it, and add a marker to any entry that lacks an article title, authors, volume or pages. Never supply missing details, expanded journal names or extra authors from memory.
+Editing rule: if the author's list is already complete and consistent in another style, leave the style alone and say so; both journals accept it. Convert a mixed list to the layout of the guide's journal-article example above. Keep each journal name and each title's capitalization as the author wrote it (the typesetters standardize these), keep "et al." where the author used it, and add a marker to any entry that lacks an article title, authors, volume or pages. Never supply missing details, expanded journal names or extra authors from memory.
 
 ## 7. Figures and tables
 
@@ -178,7 +197,7 @@ Editing rule: if the author's list is already complete and consistent in another
 
 ## 9. Cover letter
 
-The guide requires a cover letter only to disclose a previous rejection, but it is the natural place for what the editor must be told: related manuscripts, the preprint if any, and why the work is "significant progress" of interest "beyond specialists in the field". Keep it to half a page. Skeleton in `deliverable-templates.md`.
+The guide requires a cover letter only to disclose a previous rejection, but it is the natural place for what the editor must be told: related manuscripts, the preprint if any, and why the work is "significant progress" of interest "beyond specialists in the field". For Advanced Materials the letter also has to carry the case for importance: what the result makes possible outside its own class of material (`audience-and-fit.md` §2). Keep it to half a page. Skeleton in `deliverable-templates.md` §12.
 
 ## 10. Why papers are declined without review
 
@@ -191,8 +210,11 @@ In editing terms the risks are:
 - English that needs "extensive improvement", or prose that reads as machine-written.
 - A composition given as a trade name or "proprietary".
 - Key numbers without replicates, error or a statistical analysis subsection.
+- At Advanced Materials (judgment): a sound, well-benchmarked advance whose interest stays inside its own class of material. This is the paper the editor is most likely to refer to a sister journal, AFM among them.
 
 ## 11. Submission checklist
+
+One list for both journals.
 
 Needed for the first submission:
 

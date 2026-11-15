@@ -9,7 +9,7 @@ Contents: 1 Journal facts · 2 Scope and article types · 3 What is needed at su
 ## 1. Journal facts
 
 - *Carbohydrate Polymers* (abbreviated Carbohydr. Polym.), Elsevier. Its subtitle describes it as a journal for the scientific and technological aspects of industrially relevant polysaccharides, and it places itself in glycoscience. Subject areas listed on the journal page: food science, organic chemistry, biochemistry.
-- **The editors are academics.** Three Editors-in-Chief (Tatiana Budtova, Manuel Coimbra and Kevin J. Edgar in Nov 2026) and a team of managing editors, all polysaccharide scientists. This differs from Matter and AFM, where professional in-house editors screen for breadth: here a specialist screens for scope and for how well the polysaccharide is described.
+- **The editors are academics.** Three Editors-in-Chief (Tatiana Budtova, Manuel Coimbra and Kevin J. Edgar in Nov 2026) and a team of managing editors, all polysaccharide scientists. This differs from Matter, Advanced Materials and AFM, where professional in-house editors screen for breadth: here a specialist screens for scope and for how well the polysaccharide is described.
 - Submission system: Editorial Manager, reached through "Submit your article" on the journal page. Journal office: carbpol@elsevier.com.
 - Review is single anonymized (reviewers know the authors' names), normally by at least two reviewers.
 - Timeline shown on the journal page (Nov 2026): 6 days from submission to first decision, 31 days to a decision after review, 89 days to acceptance. Six days to a first decision means a large share of papers is answered by the editor alone.
@@ -67,7 +67,7 @@ Topics the journal lists as **not** of interest. Check the draft against every l
 
 ## 3. What is needed at submission
 
-Unlike Matter and AFM, **this guide offers no free-format first submission**. The format in §4–§7 applies to the first version, and with a first decision in about a week, a paper that ignores it gives the editor an easy reason to return it. Tell the author this plainly: here nothing "can wait until the journal asks" except the items after acceptance.
+Unlike Matter, Advanced Materials and AFM, **this guide offers no free-format first submission**. The format in §4–§7 applies to the first version, and with a first decision in about a week, a paper that ignores it gives the editor an easy reason to return it. Tell the author this plainly: here nothing "can wait until the journal asks" except the items after acceptance.
 
 | Item | Rule |
 |---|---|
